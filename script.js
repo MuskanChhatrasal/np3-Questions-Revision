@@ -12,13 +12,15 @@ function getMirrorInput(){
     var temp = splittedUserInput[i];
     splittedUserInput[i] = splittedUserInput[j];
     splittedUserInput[j] = temp;
+    i++;
+    j--;
   }
   var output = splittedUserInput.join('')
-  console.log(output)
+  return output
 }
 
 mirrorButton.addEventListener('click', getMirrorInput)
 
 userName.addEventListener('input',()=>{
-  userOutput.innerText = userName.value;
+  userOutput.innerText = getMirrorInput();
 })
