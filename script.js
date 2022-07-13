@@ -19,8 +19,11 @@ function getMirrorInput(){
   return output
 }
 
-mirrorButton.addEventListener('click', getMirrorInput)
-
-userName.addEventListener('input',()=>{
+mirrorButton.addEventListener('click', ()=>{
   userOutput.innerText = getMirrorInput();
+  // getMirrorInput
 })
+
+// userName.addEventListener('input',()=>{
+//   userOutput.innerText = getMirrorInput();
+// })
