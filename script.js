@@ -105,7 +105,8 @@ const storeData = {
       }
     }
   };
+// 3a: Find and console the quantity of dark blue women jeans in stock.
 
-const array = Object.entries(storeData)
-var merged = [].concat.apply([], array);
-console.log(merged)
+const darkBlueQuant = storeData.women.jeans.availability.find((data)=>data.color === "dark blue" && data.inStock === true)
+
+console.log(darkBlueQuant.quantity)
