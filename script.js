@@ -110,3 +110,12 @@ const storeData = {
 const darkBlueQuant = storeData.women.jeans.availability.find((data)=>data.color === "dark blue" && data.inStock === true)
 
 console.log(darkBlueQuant.quantity)
+
+const total = {menWalletQuant: 0};
+
+const getWallet = (acc, curr) => {
+  return {...acc, menWalletQuant: acc.menWalletQuant + curr.quantity}
+}
+const totalWalletQuant = storeData.men.wallet.availability.reduce(getWallet, total)
+
+console.log(totalWalletQuant)
